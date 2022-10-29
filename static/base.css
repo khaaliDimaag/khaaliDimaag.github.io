@@ -1,0 +1,12 @@
+html {
+  font-family: Calibri, sans-serif;
+  padding: 3vh 5vw;
+}
+
+footer {
+  text-align: end;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
