@@ -7,7 +7,7 @@ const submitted = window.sessionStorage.getItem('timestamp');
 
 submit.addEventListener('click', (e) => {
   e.preventDefault();
-  document.getElementById('timestamp').value = e.timeStamp;
+  document.getElementById('timestamp').value = e.timeStamp / 1000; // in seconds
   const data = {}
   for( const [key, val] of new FormData(form) ) {
     data[key] = val; // @dev unused thus far
