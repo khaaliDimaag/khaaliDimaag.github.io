@@ -2,8 +2,16 @@
 <html>
 
   <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="khaaliDimaag - Operating on the spectrum from only brain to the empty brain">
+    <meta name="keywords" content="khaaliDimaag, apps, games, consulting, system design">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph Meta Tags -->
+
+    <!-- Twitter Meta Tags -->
     
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9RPKVFM0WR"></script>
@@ -14,59 +22,63 @@
 
       gtag('config', 'G-9RPKVFM0WR');
     </script>
-    
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
     <title>khaaliDimaag</title>
 
     <link rel="shortcut icon" type="image/png" href="./static/kdio-logo-sq.png">
     <link rel="stylesheet" href="./static/base.css">
-    <link rel="stylesheet" href="./static/contact.css">
 
-    
   </head>
 
   <body>
 
     <header>
       <h1><u>khaaliDimaag</u> contact form</h1>
-      <p>
+      <p id="message">
 
+      </p>
+      <p id="thanks" style="display: none;">
+        Thank you for contacting khaaliDimaag! We will get back to you within ten business days.
       </p>
     </header>
 
     <form
       action="https://formspree.io/f/mgeqnrge"
+      id="contact-form"
       method="POST"
     >
       <p>
-        <label>
-          Name:
-          <input type="text" name="name" required>
-        </label>
+        <label>Name</label>
+        <br>
+        <input type="text" name="name" required>
       </p>
       <p>
-        <label>
-          Email:
-          <input type="email" name="email" required>
-        </label>
+        <label>Email</label>
+        <br>
+        <input type="email" name="email" required>
       </p>
       <p>
-        <label>
-          Subject:
-          <input type="text" name="subject">
-        </label>
+        <label>Subject</label>
+        <br>
+        <input type="text" name="subject">
       </p>
       <p>
-        <label>
-          Message:
-          <textarea name="message" required></textarea>
-        </label>
+        <label>Message</label>
+        <br>
+        <textarea name="message" required rows="7" cols="40"></textarea>
       </p>
       <div 
         class="g-recaptcha"
         data-sitekey="6LdzJcEiAAAAAHl_QNWx3q_QUTN6Z8lqRb6_UOw-"
       ></div>
+      <div>
+        <!-- Hidden elements -->
+        <input type="hidden" name="timestamp" id="timestamp">
+      </div>
       <p>
-        <button type="submit">Send</button>
+        <button type="reset" id="contact-reset">Reset</button>
+        <button type="submit" id="contact-submit">Send</button>
       </p>
     </form>
 
@@ -79,7 +91,6 @@
   </body>
 
   <script type="text/javascript" src="./static/main.js"></script>
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
+  <script type="text/javascript" src="./static/contact.js"></script>
 
 </html>
