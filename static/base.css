@@ -7,6 +7,11 @@ footer {
   text-align: end;
 }
 
-::-webkit-scrollbar {
-  display: none;
+input {
+  padding: 0.5%;
+}
+
+textarea {
+  font-family: Calibri, sans-serif;
+  padding: 1%;
 }
