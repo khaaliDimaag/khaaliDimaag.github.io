@@ -15,6 +15,15 @@
   display: none;
 }
 
+/** Colors
+ *
+ * Background: #302C10  (primary bg)
+ * Text:       #F1E6D6  
+ * Title:      #BE9B28  
+ * Secondary:  #7E6E2A  (buttons, etc.)
+ * Highlight:  #DEC99D  (links, etc.)
+ */
+
 /* Tags */
 
 html {
@@ -28,7 +37,6 @@ html {
 
 h1, h2, h3 {
   font-family: 'Comfortaa', cursive;
-  /* color: #7E6E2A; */
   color: #BE9B28;
 }
 
@@ -135,13 +143,13 @@ button {
   width: 10vw;
   margin: 0.5%;
   padding: 0.5%;
-  font-family: 'Comfortaa', cursive;
   line-height: 1.5;
   outline: none;
   color: #F1E6D6;
   background: #7E6E2A;
   border-radius: 10px;
   border: 1px solid #F1E6D6;
+  font-family: 'Comfortaa', cursive;
 }
 
 button:hover {
