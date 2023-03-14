@@ -15,14 +15,14 @@ submit.addEventListener('click', (e) => {
 
   // check if captcha is not working
   if(window.sessionStorage.getItem('captchaError')) {
-    message.innerHTML = `Stop trying to <i>Inspect Element</i> and send this form!`;
+    error.innerHTML = `Stop trying to <i>Inspect Element</i> and send this form!`;
     return;
   }
   
   // verify captcha
   const formData = new FormData(form);
   if(!formData.get('g-recaptcha-response')) {
-    message.innerHTML = `Please prove that you are not a robot.`;
+    error.innerHTML = `Please prove that you are not a robot.`;
     return;
   }
 
@@ -33,7 +33,7 @@ submit.addEventListener('click', (e) => {
   for( const [key, val] of formData ) {
     if(!val) {
       // @dev an empty `g-recaptcha-response` should not reach here because of the captcha check above
-      message.innerHTML = `Please fill out the <span class="highlight">${key}</span> field.`;
+      error.innerHTML = `Please fill out the <span class="highlight">${key}</span> field.`;
       return; 
     }
   }
@@ -47,11 +47,11 @@ submit.addEventListener('click', (e) => {
 
 }, false);
 
-reset.addEventListener('click', (e) => { message.innerHTML = ''; }, false);
+reset.addEventListener('click', (e) => { error.innerHTML = ''; }, false);
 
 again.addEventListener('click', (e) => {
   if(nonce >= 3) {
-    message.innerHTML = `You have already sent three messages. Please wait for their responses before sending another.`;
+    error.innerHTML = `You have already sent three messages. Please wait for their responses before sending another.`;
     return;
   }
   window.sessionStorage.removeItem('subject');
@@ -69,14 +69,14 @@ window.addEventListener('load', (e) => {
     thanks.style.display = '';
     info.style.display = 'none';
     form.style.display = 'none';
-    message.style.display = 'none';
+    error.style.display = 'none';
     return;
   }
 
   // this is the first load
   form.style.display = '';
   info.style.display = '';
-  message.style.display = '';
+  error.style.display = '';
   thanks.style.display = 'none';
   captcha.setAttribute('data-callback', 'captchaSuccessCallback');
   captcha.setAttribute('data-expired-callback', 'captchaExpiredCallback');
@@ -92,7 +92,7 @@ function captchaSuccessCallback(response) {
 }
 
 function captchaExpiredCallback() {
-  message.innerHTML = `CAPTCHA expired. Please try proving humanity again.`;
+  error.innerHTML = `CAPTCHA expired. Please try proving humanity again.`;
 }
 
 function captchaErrorCallback() {
