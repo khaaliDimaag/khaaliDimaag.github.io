@@ -10,6 +10,15 @@ submit.addEventListener('click', (e) => {
   document.getElementById('timestamp').value = e.timeStamp / 1000; // in seconds
   const data = {}
   for( const [key, val] of new FormData(form) ) {
+    if(!val) {
+      if(key === 'g-recaptcha-response') {
+        message.innerHTML = `Problems with the CAPTCHA. Please try again later.`;
+      }
+      else {
+        message.innerHTML = `Please fill out the <span class="highlight">${key}</span> field.`;
+      }
+      return; 
+    }
     data[key] = val; // @dev unused thus far
     window.sessionStorage.setItem(key, val);
   }

@@ -62,6 +62,11 @@ footer {
   opacity: 0.7;
 }
 
+.highlight {
+  color: #DEC99D;
+  opacity: 1;
+}
+
 span.h-list {
   display: inline;
   margin-left: 0.75vw;
@@ -86,11 +91,42 @@ span.h-list {
 
 /* Contact Form stuff */
 
+label {
+  display: inline-block;
+  margin-bottom: 1vh;
+  margin-left: -0.5vw;
+}
+
 input {
+  height: 3vh;
   padding: 0.5%;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 textarea {
-  font-family: Calibri, sans-serif;
-  padding: 1%;
+  padding: 0.5% 1%;
+  margin-bottom: 1vh;
+}
+
+input, textarea {
+  width: 20vw;
+  outline: none;
+  color: #F1E6D6;
+  background: #302C10;
+  border-radius: 2%;
+  border: 1px solid #F1E6D6;
+  font-family: 'Ubuntu', sans-serif;
+  line-height: 1.5;
+}
+
+input:focus, textarea:focus, 
+input:hover, textarea:hover {
+  outline: none;
+  color: #302C10;
+  background: #F1E6D6;
+  border: 1px solid #DEC99D;
+}
+
+#contact-form {
+  margin-top: 3%;
 }
