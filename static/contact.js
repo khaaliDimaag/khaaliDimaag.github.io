@@ -49,21 +49,36 @@ submit.addEventListener('click', (e) => {
 reset.addEventListener('click', (e) => { error.innerHTML = ''; }, false);
 
 again.addEventListener('click', (e) => {
+
+  // too many messages!
   if(nonce >= 3) {
     error.innerHTML = `You have already sent three messages. Please wait for their responses before sending another.`;
     return;
   }
+  
+  // clear form
   window.sessionStorage.removeItem('subject');
   window.sessionStorage.removeItem('message');
   window.sessionStorage.removeItem('g-recaptcha-response');
   window.sessionStorage.removeItem('timestamp');
   window.sessionStorage.removeItem('captchaError');
   document.getElementById('contact-form').reset();
-  document.getElementById('name') = window.sessionStorage.getItem('name');
-  document.getElementById('email') = window.sessionStorage.getItem('email');
+  
+  // populate form
+  document.getElementById('name').value = window.sessionStorage.getItem('name');
+  document.getElementById('email').value = window.sessionStorage.getItem('email');
+
+  // show form
+  thanks.style.display = 'none';
+  info.style.display = '';
+  form.style.display = '';
+  error.style.display = '';
+  error.innerHTML = '';
 }, false);
 
 window.addEventListener('load', (e) => {
+
+  console.log('loaded')
   if(nonce) {
     thanks.style.display = '';
     info.style.display = 'none';
