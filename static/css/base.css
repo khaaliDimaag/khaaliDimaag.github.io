@@ -91,6 +91,10 @@ span.h-list {
 
 /* Contact Form stuff */
 
+form {
+  margin-top: 3%;
+}
+
 label {
   display: inline-block;
   margin-bottom: 1vh;
@@ -127,6 +131,26 @@ input:hover, textarea:hover {
   border: 1px solid #DEC99D;
 }
 
-#contact-form {
-  margin-top: 3%;
+button {
+  width: 10vw;
+  margin: 0.5%;
+  padding: 0.5%;
+  font-family: 'Comfortaa', cursive;
+  line-height: 1.5;
+  outline: none;
+  color: #F1E6D6;
+  background: #7E6E2A;
+  border-radius: 10px;
+  border: 1px solid #F1E6D6;
+}
+
+button:hover {
+  color: #DEC99D;
+  border: 1px solid #DEC99D;
+  cursor: pointer;
+}
+
+:disabled {
+  opacity: 0.5;
+  pointer-events: none;
 }
