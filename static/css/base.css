@@ -1,0 +1,156 @@
+@import url('./fonts.css');
+
+/* Background images */
+
+#projects {
+  background-image: url('./static/kdio-logo-transparent.png');
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* Remove Scrollbars */
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Tags */
+
+html {
+  font-family: Calibri, sans-serif;
+  padding: 3vh 5vw;
+  background: #302C10;
+  color: #F1E6D6;
+  font-family: 'Ubuntu', sans-serif;
+  line-height: 1.5;
+}
+
+h1, h2, h3 {
+  font-family: 'Comfortaa', cursive;
+  /* color: #7E6E2A; */
+  color: #BE9B28;
+}
+
+h3 {
+  margin-top: 2%;
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  opacity: 0.7;
+}
+
+a:hover {
+  color: #DEC99D;
+  opacity: 1;
+}
+
+footer {
+  text-align: end;
+}
+
+/* Classes */
+
+.muted {
+  opacity: 0.7;
+}
+
+.highlight {
+  color: #DEC99D;
+  opacity: 1;
+}
+
+span.h-list {
+  display: inline;
+  margin-left: 0.75vw;
+  margin-right: 0.75vw;
+}
+
+.caption {
+  font-size: small; 
+  margin-top: -1em;
+}
+
+.description {
+  padding-left: 2%;
+}
+
+/* IDs */
+
+#consulting, #projects {
+  margin-top: 3%;
+}
+
+
+/* Contact Form stuff */
+
+form {
+  margin-top: 3%;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 1vh;
+  margin-left: -0.5vw;
+}
+
+input {
+  height: 3vh;
+  padding: 0.5%;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+textarea {
+  padding: 0.5% 1%;
+  margin-bottom: 1vh;
+}
+
+input, textarea {
+  width: 20vw;
+  outline: none;
+  color: #F1E6D6;
+  background: #302C10;
+  border-radius: 2%;
+  border: 1px solid #F1E6D6;
+  font-family: 'Ubuntu', sans-serif;
+  line-height: 1.5;
+}
+
+input:focus, textarea:focus, 
+input:hover, textarea:hover {
+  outline: none;
+  color: #302C10;
+  background: #F1E6D6;
+  border: 1px solid #DEC99D;
+}
+
+button {
+  width: 10vw;
+  margin: 0.5%;
+  padding: 0.5%;
+  font-family: 'Comfortaa', cursive;
+  line-height: 1.5;
+  outline: none;
+  color: #F1E6D6;
+  background: #7E6E2A;
+  border-radius: 10px;
+  border: 1px solid #F1E6D6;
+}
+
+button:hover {
+  color: #DEC99D;
+  border: 1px solid #DEC99D;
+  cursor: pointer;
+}
+
+:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
