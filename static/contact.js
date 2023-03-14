@@ -7,8 +7,8 @@ const thanks = document.getElementById('thanks');
 const again = document.getElementById('one-more');
 const captcha = document.getElementById('captcha');
 
-let nonce;
-try { nonce = parseInt(window.sessionStorage.getItem('nonce')); } catch(e) { nonce = 0; }
+let nonce = parseInt(window.sessionStorage.getItem('nonce'));
+if(!nonce) nonce = 0;
 
 submit.addEventListener('click', (e) => {
   e.preventDefault();
