@@ -1,0 +1,96 @@
+@import url('./fonts.css');
+
+/* Background images */
+
+#projects {
+  background-image: url('./static/kdio-logo-transparent.png');
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* Remove Scrollbars */
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Tags */
+
+html {
+  font-family: Calibri, sans-serif;
+  padding: 3vh 5vw;
+  background: #302C10;
+  color: #F1E6D6;
+  font-family: 'Ubuntu', sans-serif;
+  line-height: 1.5;
+}
+
+h1, h2, h3 {
+  font-family: 'Comfortaa', cursive;
+  /* color: #7E6E2A; */
+  color: #BE9B28;
+}
+
+h3 {
+  margin-top: 2%;
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  opacity: 0.7;
+}
+
+a:hover {
+  color: #DEC99D;
+  opacity: 1;
+}
+
+footer {
+  text-align: end;
+}
+
+/* Classes */
+
+.muted {
+  opacity: 0.7;
+}
+
+span.h-list {
+  display: inline;
+  margin-left: 0.75vw;
+  margin-right: 0.75vw;
+}
+
+.caption {
+  font-size: small; 
+  margin-top: -1em;
+}
+
+.description {
+  padding-left: 2%;
+}
+
+/* IDs */
+
+#consulting, #projects {
+  margin-top: 3%;
+}
+
+
+/* Contact Form stuff */
+
+input {
+  padding: 0.5%;
+}
+
+textarea {
+  font-family: Calibri, sans-serif;
+  padding: 1%;
+}
