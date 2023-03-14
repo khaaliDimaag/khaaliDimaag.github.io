@@ -12,9 +12,8 @@ try { nonce = parseInt(window.sessionStorage.getItem('nonce')); } catch(e) { non
 
 submit.addEventListener('click', (e) => {
   e.preventDefault();
-
   // check if captcha is not working
-  if(window.sessionStorage.getItem('captchaError')) {
+  if(window.sessionStorage.getItem('captchaError') === 'true') {
     error.innerHTML = `Stop trying to <i>Inspect Element</i> and send this form!`;
     return;
   }
@@ -97,7 +96,7 @@ function captchaExpiredCallback() {
 
 function captchaErrorCallback() {
   info.innerHTML = 'There is some problem with reCAPTCHA. You will not be able to send a message right now. Please try again later.';
-  captcha.style.display = 'none';
+  // captcha.style.display = 'none';
   for(let i=0; i<form.elements.length; i++) { form.elements[i].disabled = true; }
   window.sessionStorage.setItem('captchaError', true);
 }
