@@ -26,7 +26,7 @@ submit.addEventListener('click', (e) => {
   }
 
   // set hidden field values
-  formData.set('timestamp', e.timeStamp / 1000); // in seconds
+  document.getElementById('timestamp').value =  e.timeStamp / 1000; // in seconds
 
   // check empty responses
   for( const [key, val] of formData ) {
