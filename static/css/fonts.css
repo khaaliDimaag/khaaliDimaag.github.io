@@ -1,5 +1,19 @@
 /* Ubuntu */
+@import url('../fonts/Ubuntu/Ubuntu-Regular.ttf');
+@import url('../fonts/Ubuntu/Ubuntu-Italic.ttf');
+@import url('../fonts/Ubuntu/Ubuntu-Bold.ttf');
+@import url('../fonts/Ubuntu/Ubuntu-BoldItalic.ttf');
+@import url('../fonts/Ubuntu/Ubuntu-Medium.ttf');
+@import url('../fonts/Ubuntu/Ubuntu-MediumItalic.ttf');
+@import url('../fonts/Ubuntu/Ubuntu-Light.ttf');
+@import url('../fonts/Ubuntu/Ubuntu-LightItalic.ttf');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 /* Comfortaa */
+@import url('../fonts/Comfortaa/static/Comfortaa-Bold.ttf');
+@import url('../fonts/Comfortaa/static/Comfortaa-Light.ttf');
+@import url('../fonts/Comfortaa/static/Comfortaa-Medium.ttf');
+@import url('../fonts/Comfortaa/static/Comfortaa-Regular.ttf');
+@import url('../fonts/Comfortaa/static/Comfortaa-SemiBold.ttf');
+@import url('../fonts/Comfortaa/Comfortaa-VariableFont_wght.ttf');
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
