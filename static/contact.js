@@ -30,7 +30,7 @@ submit.addEventListener('click', (e) => {
 
   // check empty responses
   for( const [key, val] of formData ) {
-    if(!val) {
+    if(key != 'timestamp' && !val) { // @dev hotfix to allow for form sending, no idea why timestamp is '' on first submit click
       // @dev an empty `g-recaptcha-response` should not reach here because of the captcha check above
       error.innerHTML = `Please fill out the <span class="highlight">${key}</span> field.`;
       return; 
