@@ -1,169 +1,92 @@
 @import url('./fonts.css');
 
-/* Background images */
-
-#projects {
-  background-image: url('./static/kdio-logo-transparent.png');
-  background-position: right;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
 /* Remove Scrollbars */
 
 ::-webkit-scrollbar {
   display: none;
 }
 
-/** Colors
- *
- * Background: #302C10  (primary bg)
- * Text:       #F1E6D6  
- * Title:      #BE9B28  
- * Secondary:  #7E6E2A  (buttons, etc.)
- * Highlight:  #DEC99D  (links, etc.)
- */
+:root {
+  /* chosen: 96, scale: 3 */
+  --light-level-0: oklch(96% none none);
+  --light-level-1: oklch(93% none none);
+  --light-level-2: oklch(90% none none);
+  --light-level-3: oklch(87% none none);
+  --light-muted: oklch(81% none none);
+  --light-primary: oklch(10% none none);
+  --light-secondary: oklch(19% none none);
+  --light-accent-0: oklch(4% none none);
+  --light-accent-1: oklch(7% none none);
 
-/* Tags */
+  /* chosen: 7, scale: 4 */
+  --dark-level-0: oklch(7% none none);
+  --dark-level-1: oklch(11% none none);
+  --dark-level-2: oklch(15% none none);
+  --dark-level-3: oklch(19% none none);
+  --dark-muted: oklch(27% none none);
+  --dark-primary: oklch(85% none none);
+  --dark-secondary: oklch(73% none none);
+  --dark-accent-0: oklch(93% none none);
+  --dark-accent-1: oklch(89% none none);
+}
 
 html {
-  font-family: Calibri, sans-serif;
-  padding: 3vh 5vw;
-  background: #302C10;
-  color: #F1E6D6;
-  font-family: 'Ubuntu', sans-serif;
+  background-color: var(--light-level-0);
+  color: var(--light-primary);
+  font-family: "Hind", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
   line-height: 2;
+  height: 100vh;
 }
 
-h1, h2, h3 {
-  font-family: 'Comfortaa', cursive;
-  color: #BE9B28;
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-h3 {
-  margin-top: 2%;
+header {
+  height: 80px;
+  padding: 24px;
+  display: flex;
+  justify-content: right;
+}
+
+header > .usr-btn {
+  align-self: center;
+  font-size: 16px;
+  line-height: 1.2;
+  padding: 8px 12px 4px;
+  border: 2px dashed var(--light-accent-0);
+  border-radius: 8px;
+}
+
+main {
+  padding: 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow-y: auto;
+  text-align: center;
 }
 
 p {
-  margin-top: 0.5em;
-  margin-bottom: 1em;
+  margin: 0;
 }
-
-a {
-  text-decoration: none;
-  color: inherit;
-  opacity: 0.7;
-}
-
-a:hover {
-  color: #DEC99D;
-  opacity: 1;
-}
-
-footer {
-  text-align: end;
-  margin: 0 2rem;
-}
-
-hr {
-  margin: 2rem 0 1rem;
-}
-
-/* Classes */
 
 .muted {
-  opacity: 0.7;
+  color: var(--light-muted);
 }
 
-.highlight {
-  color: #DEC99D;
-  opacity: 1;
-}
-
-span.h-list {
-  display: inline;
-  margin-left: 0.75vw;
-  margin-right: 0.75vw;
-}
-
-.caption {
-  font-size: small; 
-  margin-top: -1em;
-}
-
-.description {
-  padding-left: 2%;
-}
-
-/* IDs */
-
-#consulting, #projects {
-  margin-top: 3%;
-}
-
-
-/* Contact Form stuff */
-
-form {
-  margin-top: 3%;
-}
-
-label {
-  display: inline-block;
-  margin-bottom: 1vh;
-  margin-left: -0.5vw;
-}
-
-input {
-  height: 3vh;
-  padding: 0.5%;
-  font-family: 'Ubuntu', sans-serif;
-}
-
-textarea {
-  padding: 0.5% 1%;
-  margin-bottom: 1vh;
-}
-
-input, textarea {
-  width: 20vw;
-  outline: none;
-  color: #F1E6D6;
-  background: #302C10;
-  border-radius: 2%;
-  border: 1px solid #F1E6D6;
-  font-family: 'Ubuntu', sans-serif;
-  line-height: 1.5;
-}
-
-input:focus, textarea:focus, 
-input:hover, textarea:hover {
-  outline: none;
-  color: #302C10;
-  background: #F1E6D6;
-  border: 1px solid #DEC99D;
-}
-
-button {
-  width: 10vw;
-  margin: 0.5%;
-  padding: 0.5%;
-  line-height: 1.5;
-  outline: none;
-  color: #F1E6D6;
-  background: #7E6E2A;
-  border-radius: 10px;
-  border: 1px solid #F1E6D6;
-  font-family: 'Comfortaa', cursive;
-}
-
-button:hover {
-  color: #DEC99D;
-  border: 1px solid #DEC99D;
+.muted > #essay:hover {
   cursor: pointer;
+  font-style: italic;
 }
 
-:disabled {
-  opacity: 0.5;
-  pointer-events: none;
+#bhaarat {
+  cursor: pointer;
 }
