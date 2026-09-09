@@ -50,6 +50,18 @@ body {
 
 header {
   height: 80px;
+  padding: 24px;
+  display: flex;
+  justify-content: right;
+}
+
+header > .usr-btn {
+  align-self: center;
+  font-size: 16px;
+  line-height: 1.2;
+  padding: 8px 12px 4px;
+  border: 2px dashed var(--light-accent-0);
+  border-radius: 8px;
 }
 
 main {
